@@ -54,21 +54,31 @@ function greet() {
 	return 'hello'
 }
 
+greet()
+
 function addSpaces(str) {
 	const outStr = str.split().join('-')
 	return outStr
 }
+
+console.log(addSpaces('Hello and welcome to functional programming'))
 
 function choose(arr) {
 	const r = Math.floor(Math.random() * arr.length)
 	return arr[r]
 }
 
+console.log(choose(['Apples', 'Bananas', 'Pancakes']))
+
 function cubeArea(x, y, z) {
 	return x * y * y
 }
 
+console.log(cubeArea(5, 6, 7))
 
+
+
+console.log('7 ------------------------------')
 
 /* ***********************************************
 Define an arrow functon that takes two parameters 

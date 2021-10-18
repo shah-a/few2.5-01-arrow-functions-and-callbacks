@@ -5,7 +5,8 @@
 
 // Here are some built in functions that use callbacks
 
-// 1 ------------------------------------------------------------
+
+console.log('1 ------------------------------')
 
 // TODO: The setTimeout function takes a callback. I've used a 
 // regular function you should change it to an arrow function
@@ -18,14 +19,14 @@ setTimeout(function() {
 // A Callback is a function you pass as a parameter to 
 // a function. These appear everywhere in javascript
 
-// 2 -----------------------------------------------------------
+console.log('2 ------------------------------')
 
 // TODO: use setTimeout to print a message 3 seconds in the future:
 
 
 
 
-// 3 ----------------------------------------------------------
+console.log('3 ------------------------------')
 
 const primes = [1,2,3,5,7]
 
@@ -57,7 +58,7 @@ primes.forEach((n) => {
 // https://javascript.info/callbacks
 // https://javascript.info/array-methods#iterate-foreach
 
-// 4 ----------------------------------------------------------
+console.log('4 ------------------------------')
 
 // After reading the documentation you may have noticed that
 // forEach supplies three parameters to the callback: item, index, and array
@@ -73,7 +74,7 @@ primes.forEach((item, index, arr) => {
 
 
 
-// 5 --------------------------------------------------------
+console.log('5 ------------------------------')
 
 /* TODO: ***********************************************
 For each of the names in the array below print
@@ -106,7 +107,7 @@ with a delay of 1200ms.
 */
 
 
-// 6 -----------------------------------------------
+console.log('6 ------------------------------')
 
 // These callbacks and forEach are really useful. You'll 
 // see these everywhere in js! You need to take this 
