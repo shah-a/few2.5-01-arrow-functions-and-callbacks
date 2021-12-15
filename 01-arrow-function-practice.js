@@ -47,32 +47,46 @@ const pi = () => 3.14
 
 console.log(pi()) // -> 3.14
 
+// ---------------------------------------------------------
+// TODO: Convert the following functions to arrow functions:
 
-// TODO: Convert the following functions to arrow functions: 
+// function greet() {
+//   return 'hello'
+// }
 
-function greet() {
-	return 'hello'
-}
+const greet = () => 'hello'
 
 greet()
 
-function addSpaces(str) {
-	const outStr = str.split().join('-')
-	return outStr
+// function addSpaces(str) {
+//   const outStr = str.split().join('-')
+//   return outStr
+// }
+
+const addSpaces = (str) => {
+  const outStr = str.split().join('-')
+  return outStr
 }
 
 console.log(addSpaces('Hello and welcome to functional programming'))
 
-function choose(arr) {
-	const r = Math.floor(Math.random() * arr.length)
-	return arr[r]
+// function choose(arr) {
+//   const r = Math.floor(Math.random() * arr.length)
+//   return arr[r]
+// }
+
+const choose = (arr) => {
+  const r = Math.floor(Math.random() * arr.length)
+  return arr[r]
 }
 
 console.log(choose(['Apples', 'Bananas', 'Pancakes']))
 
-function cubeArea(x, y, z) {
-	return x * y * y
-}
+// function cubeArea(x, y, z) {
+//   return x * y * y
+// }
+
+const cubeArea = (x, y, z) => x * y * y
 
 console.log(cubeArea(5, 6, 7))
 
@@ -87,9 +101,11 @@ these to print: Good morning <prefix> <name>
 for example: Good morning Mr. Mustard
 */
 
+const greetByName = (name, prefix) => console.log(`Good morning ${prefix} ${name}`)
+
+greetByName('Mustard', 'Mr.')
 
 /* ***********************************************
 If you haven't already rewrite the functions above
 on a single line
 */
-
