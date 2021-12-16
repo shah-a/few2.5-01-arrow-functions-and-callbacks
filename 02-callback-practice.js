@@ -29,7 +29,7 @@ setTimeout(() => console.log('Example 2 - three seconds later'), 3000)
 
 console.log('3 ------------------------------')
 
-const numbers = [1,2,3,5,7]
+const primes = [1,2,3,5,7]
 
 // Using forEach() often you'll have a loop and want to 
 // iterate over each element in the loop.
@@ -39,7 +39,7 @@ const numbers = [1,2,3,5,7]
 // executes the callback once for each item in the array
 // passing one value from the array each iteration
 
-numbers.forEach((n) => {
+primes.forEach((n) => {
   // This function is the callback
   // n is a value from the numbers array
   console.log(n)
@@ -48,12 +48,12 @@ numbers.forEach((n) => {
 // TODO: Use foreach to double each number in the numbers array
 // print the new value to the console. 
 
-numbers.forEach((n) => console.log(n * 2))
+primes.forEach((n) => console.log(n * 2))
 
 // TODO: Use forEach to print only the even numbers to the console
 // You know a number is even if n % 2 === 0
 
-numbers.forEach((n) => {
+primes.forEach((n) => {
   if (n % 2 === 0) {
     console.log(n)
   }
@@ -73,14 +73,14 @@ console.log('4 ------------------------------')
 // These extra parameters are not always needed so they are often omitted. 
 // Some times they can be useful. 
 
-numbers.forEach((item, index, arr) => {
+primes.forEach((item, index, arr) => {
   console.log(item, index, arr)
 })
 
 // TODO: Use the index. Multiply each value by its index in the array and 
 // print the value to the console
 
-numbers.forEach((item, index) => {
+primes.forEach((item, index) => {
   console.log(item * index)
 })
 
