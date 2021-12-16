@@ -11,10 +11,11 @@ console.log('1 ------------------------------')
 // TODO: The setTimeout function takes a callback. I've used a 
 // regular function you should change it to an arrow function
 
-setTimeout(function() {
-	console.log('Example 1 - one second later')
-}, 1000)
+// setTimeout(function() {
+// 	console.log('Example 1 - one second later')
+// }, 1000)
 
+setTimeout(() => console.log('Example 1 - one second later'), 1000)
 
 // A Callback is a function you pass as a parameter to 
 // a function. These appear everywhere in javascript
@@ -23,12 +24,12 @@ console.log('2 ------------------------------')
 
 // TODO: use setTimeout to print a message 3 seconds in the future:
 
-
+setTimeout(() => console.log('Example 2 - three seconds later'), 3000)
 
 
 console.log('3 ------------------------------')
 
-const primes = [1,2,3,5,7]
+const numbers = [1,2,3,5,7]
 
 // Using forEach() often you'll have a loop and want to 
 // iterate over each element in the loop.
@@ -38,18 +39,25 @@ const primes = [1,2,3,5,7]
 // executes the callback once for each item in the array
 // passing one value from the array each iteration
 
-primes.forEach((n) => {
-	// This function is the callback
-	// n is a value from the numbers array
-	console.log(n)
+numbers.forEach((n) => {
+  // This function is the callback
+  // n is a value from the numbers array
+  console.log(n)
 })
 
 // TODO: Use foreach to double each number in the numbers array
 // print the new value to the console. 
 
+numbers.forEach((n) => console.log(n * 2))
 
 // TODO: Use forEach to print only the even numbers to the console
 // You know a number is even if n % 2 === 0
+
+numbers.forEach((n) => {
+  if (n % 2 === 0) {
+    console.log(n)
+  }
+})
 
 // The forEach method calls the provided function with the following
 // parameters: item, index, array.
@@ -65,14 +73,16 @@ console.log('4 ------------------------------')
 // These extra parameters are not always needed so they are often omitted. 
 // Some times they can be useful. 
 
-primes.forEach((item, index, arr) => {
-	console.log(item, index, arr)
+numbers.forEach((item, index, arr) => {
+  console.log(item, index, arr)
 })
 
-// TODO: Use the index. Multiply each value by it's index in the array and 
+// TODO: Use the index. Multiply each value by its index in the array and 
 // print the value to the console
 
-
+numbers.forEach((item, index) => {
+  console.log(item * index)
+})
 
 console.log('5 ------------------------------')
 
@@ -84,13 +94,13 @@ is an item from the array. In this case a name.
 */
 const names = ['Andy', 'Boba', 'Kris', 'Dana']
 
-
+names.forEach((name) => console.log(name))
 
 
 /* ***********************************************
-forEach provides a second parameter to it's
+forEach provides a second parameter to its
 callback that is the index. Print each name from
-from the array preceded by it's index + 1 and the )
+from the array preceded by its index + 1 and the )
 like this: 
 
 1) Andy
@@ -100,12 +110,16 @@ like this:
 
 */
 
+names.forEach((name, index) => console.log(`${index + 1}) ${name}`))
 
 /* ************************************************
 Use forEach and setTimeout to print each name
 with a delay of 1200ms.
 */
 
+names.forEach((name) => {
+  setTimeout(() => console.log(`${name} - 1200ms later`), 1200)
+})
 
 console.log('6 ------------------------------')
 
@@ -122,4 +136,10 @@ console.log('6 ------------------------------')
 
 // NOTE! Do not use arr.forEach() to solve this problem! 
 
+const forEvery = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr)
+  }
+}
 
+forEvery([1, 2, 3], (num) => console.log(`${num} - forEvery version`))
